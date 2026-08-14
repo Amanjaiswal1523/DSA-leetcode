@@ -1,0 +1,30 @@
+Question
+Peak Index in a Mountain Array
+My Approach — Brute Force
+Time Complexity
+O(n)
+
+code
+class Solution {
+public:
+    int peakIndexInMountainArray(vector<int>& arr) {
+        int i = 0;
+        int k = 1;
+        int m = 2;
+
+        while (m < arr.size()) {
+
+            // Check if k is the peak
+            if (arr[i] < arr[k] && arr[k] > arr[m]) {
+                return k;
+            }
+
+            // Move all three pointers forward
+            i++;
+            k++;
+            m++;
+        }
+
+        return -1;
+    }
+};
