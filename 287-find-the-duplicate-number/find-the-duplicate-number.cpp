@@ -16,6 +16,7 @@ public:
           return v[i];
         }  }
         return -1;
+        // we can also use xor method too
       
 
 
